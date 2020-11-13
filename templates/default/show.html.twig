@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if post is not empty %}
+        {{ post.title }}
+    {% else %}
+        No post found
+    {% endif %}
+{% endblock title %}
+
+
+{% block body %}
+    {% if post is not empty %}
+        <h1>{{ post.title }}</h1>
+        <h4>by {{ post.author }}</h4>
+        <p>{{ post.body }}</p>
+    {% else %}
+        <h1>There's no post matching your URL</h1>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,3 @@
+#default:
+#    path: /{slug}
+#    controller: App\Controller\DefaultController::show

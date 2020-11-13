@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Post {% endblock title%}
+
+{% block body %}
+    <h1>Posts</h1>
+
+    <h3>There are ({{ posts|length }}) in our blog</h3>
+
+    <ul>
+        {% for post in posts %}
+            <li><a href={{ path('app_default_show', {'slug': post.slug}) }}>{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
